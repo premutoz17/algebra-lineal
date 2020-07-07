@@ -1,0 +1,59 @@
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[mathscr,mathcal]{euscript}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{shapepar}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{shapepar}
+\newtheorem{theorem}{Teorema}
+\newtheorem{proposition}{Proposición}
+\newtheorem{definition}{Definición}
+\newtheorem{axiom}{Axioma}
+\newtheorem{corollary}{Corolario}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{remark}{Remark}
+
+\title{Notas de Álgebra Lineal}
+\author{Carlos Francisco Flores Galicia.}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\chapter{Espacios vectoriales}
+\subsection{Espacios vectoriales}
+\subsection{Subespacios vectoriales}
+\subsection{Combinaciones lineales}
+
+\begin{definition}
+Sea $V$ un espacio vectorial y $S \subseteq V$, $S \neq \emptyset$. Se dice que un vector $v \in V$ es combinación lineal de elementos de $S$, si existe un conjunto finito $\{s_1,s_2,...,s_n\}\subseteq S$ y escalares $\lambda_1,\lambda_2,...\lambda_n \in K$ tales que $v=\lambda_1 s_1+\lambda_2 s_2+...+\lambda_n s_n$. Se dice también que $v$ es combinación lineal de $\{s_1,s_2,...,s_n\}$.
+\end{definition}
+
+\begin{definition}
+Sea $V$ un espacio vectorial y $S \subseteq V$, $S \neq \emptyset$. Definimos al conjunto generado por elementos de $S$ como
+
+\begin{equation}
+\langle S \rangle = \{\lambda_1 s_1+\lambda_2 s_2+...+\lambda_n s_n : \lambda_1,\lambda_2,...\lambda_n \in K \}
+\end{equation}
+
+Esto es, el conjunto generado por $S$ es el conjunto de todas las combinaciones lineales de los elementos de $S$.
+\end{definition}
+
+\begin{definition}
+$\langle \emptyset \rangle=\{0_k\}$
+\end{definition}
+
+\begin{theorem}
+Sea $V$ un espacio vectorial y $S \subseteq V$, $S \neq \emptyset$, entonces $\langle S \rangle \leq V$ y $\langle S \rangle$ es el subespacio de $V$ más pequeño que contiene a $S$ (es decir, que $\langle S \rangle$ es un subconjunto de todos los subespacios de $V$ que contienen a $S$).
+\end{theorem}
+\begin{proof}
+Probemos primero que $\langle S \rangle \leq V$. 
+\end{proof}
+
+\end{document}

@@ -68,7 +68,7 @@ Sea $S=\{s_1,s_2,...,s_n\}\subseteq V$. Decimos que $S$ es linealmente dependien
 \end{definition}
 
 \begin{theorem}
-Sea $S=\{s_1,s_2,...,s_n\}\subseteq V$. $S$ es linealmente dependiente si y solo si $a_1s_1+a_2s_2+...+a_ns_n=0_V$ con $a_1,a_2,...,a_n \in K$, no todos cero.
+Sea $S=\{s_1,s_2,...,s_n\}\subseteq V$. $S$ es linealmente dependiente si y solo si existen $a_1,a_2,...,a_n \in K$ tal que $a_1s_1+a_2s_2+...+a_ns_n=0_V$ y $a_1,a_2,...,a_n \in K$ no son todos cero.
 \end{theorem}
 
 \begin{proof}
@@ -77,11 +77,21 @@ $\Leftarrow$ Supongamos que existen $a_1,a_2,...,a_n \in K$, no todos cero, tale
 \end{proof}
 
 \begin{definition}
-Sea $S \subseteq V$. Decimos que $S$ es linealmente independiente si no es linealmente dependiente.
+Sea $S \subseteq V$. Decimos que $S$ es linealmente independiente si y solo si no es linealmente dependiente.
 \end{definition}
 
+Por la equivalencia lógica $(P \Leftrightarrow \exists x (Q \wedge S)) \Leftrightarrow (\neg P \Leftrightarrow \forall x (Q\Rightarrow \neg S))$, el teorema anterior es equivalente a la siguiente proposición que enunciaremos como corolario.
+
+\begin{corollary}
+Sea $S \subseteq V$. $S$ es linealmente independiente si y solo si para todo $a_1,a_2,...,a_n \in K$ tal que si $a_1s_1+a_2s_2+...+a_ns_n=0_V$ entonces $a_1,a_2,...,a_n$ son todos cero.
+\end{corollary}
+
+\begin{proof}
+Se sigue del teorema anterior y de la equivalencia lógica $(P \Leftrightarrow \exists x (Q \wedge S)) \Leftrightarrow (\neg P \Leftrightarrow \forall x (Q\Rightarrow \neg S))$.
+\end{proof}
+
 \begin{proposition}
-Si $S \subseteq V$ tal que $0_V \in S$, entonces $S$ es linealmente dependiente.
+Si $S \subseteq V$ y $0_V \in S$, entonces $S$ es linealmente dependiente.
 \end{proposition}
 
 \begin{proof}
@@ -93,7 +103,32 @@ El conjunto $\emptyset$ es linealmente independiente
 \end{theorem}
 
 \begin{proof}
-Tenemos que $\emptyset$ no es linealmente dependiente, por lo tanto es linealmente independiente.
+Supongamos que $\emptyset$ es linealmente dependiente, entonces existe $s \in \emptyset$ tal que $s \in \langle \emptyset-\{s\} \rangle$. Como $s \in \emptyset$ entonces por definición del conjunto vacío se cumple que $s\neq s$ lo cual es una contradicción. Por lo tanto el conjunto $\emptyset$ es linealmente independiente.
 \end{proof}
+
+\begin{lemma}
+Si $V$ es un $K-$espacio vectorial y $S_1\subseteq S_2\subseteq V$, entonces $\langle S_1 \rangle \subseteq \langle S_2 \rangle$.
+\end{lemma}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}
+Sea $V$ un $K-$espacio vectorial y sean $S_1\subseteq S_2\subseteq V$. Si $S_1$ es linealmente dependiente entonces $S_2$ también lo es.
+\end{theorem}
+
+\begin{proof}
+Supongamos que $S_1$ es linealmente dependiente, entonces existe $s \in S_1$ tal que $s \in \langle S_1-\{s\} \rangle$. Luego, como $S_1\subseteq S_2$ entonces $S_1-\{s\} \subseteq S_2-\{s \}$, y por el lema anterior $\langle S_1-\{s \} \rangle \subseteq \langle S_2-\{s \} \rangle$, por lo que $s \in \langle S_2-\{s\} \rangle$, luego $S_2$ es linealmente dependiente.
+\end{proof}
+
+\begin{corollary}
+Sea $V$ un $K-$espacio vectorial y sean $S_1\subseteq S_2\subseteq V$. Si $S_2$ es linealmente independiente entonces $S_1$ también lo es.
+\end{corollary}
+
+\begin{proof}
+La demostración se sigue de hacer la contrapositiva del teorema anterior.
+\end{proof}
+
 
 \end{document}

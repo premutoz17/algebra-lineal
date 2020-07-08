@@ -36,7 +36,7 @@ Sea $V$ un espacio vectorial y $S \subseteq V$, $S \neq \emptyset$. Se dice que 
 \end{definition}
 
 \begin{definition}
-Sea $V$ un espacio vectorial y $S \subseteq V$, $S \neq \emptyset$. Definimos al conjunto generado por elementos de $S$ como
+Sea $V$ un espacio vectorial y $S=\{ s_1,s_2,...,s_n \} \subseteq V$. Definimos al conjunto generado por elementos de $S$ como
 
 \begin{equation}
 \langle S \rangle = \{\lambda_1 s_1+\lambda_2 s_2+...+\lambda_n s_n : \lambda_1,\lambda_2,...\lambda_n \in K \}
@@ -46,14 +46,54 @@ Esto es, el conjunto generado por $S$ es el conjunto de todas las combinaciones 
 \end{definition}
 
 \begin{definition}
-$\langle \emptyset \rangle=\{0_k\}$
+$\langle \emptyset \rangle=\{0_V\}$
 \end{definition}
 
 \begin{theorem}
 Sea $V$ un espacio vectorial y $S \subseteq V$, $S \neq \emptyset$, entonces $\langle S \rangle \leq V$ y $\langle S \rangle$ es el subespacio de $V$ más pequeño que contiene a $S$ (es decir, que $\langle S \rangle$ es un subconjunto de todos los subespacios de $V$ que contienen a $S$).
 \end{theorem}
 \begin{proof}
-Probemos primero que $\langle S \rangle \leq V$. 
+Probemos primero que $\langle S \rangle \leq V$. Como $S \neq \emptyset$, al menos $0_V \in \langle S \rangle$. Luego, sean $u,v \in \langle S \rangle$, por tanto $u$ y $v$ son combinaciones lineales de elementos de $S$, de manera que existen $s_1,s_2,...s_n,t_1,t_2,...,t_n \in S$ tales que $v=a_1s_1+...+a_ns_n$ y $u=b_1t_1+...+b_nt_n$, con $a_1,...a_n,b_1,...,b_n \in K$. Ahora bien, es claro que $v+u=a_1s_1+...+a_ns_n+b_1t_1+...+b_nt_n$ y $cu=cb_1t_1+...+cb_nt_n$ pertenecen a $\langle S \rangle$, para cualquier $c \in K$. Por lo tanto $\langle S \rangle \leq V$.\newline \newline
+Por otra parte, sea $U$ un subespacio de $V$ que contiene a $S$. Sea $v \in \langle S \rangle$, entonces $v=a_1s_1+...+a_ns_n$, con $a_1,...,a_n \in K$ y $s_1,...,s_n \in S$, además como $S \subseteq U$ entonces $v=a_1s_1+a_2s_2+...+a_ns_n \in U$, pues los subespacios vectoriales son cerrados bajo la suma y bajo el producto por escalares. Por tanto tenemos que si $v \in \langle S \rangle$ entonces $v \in U$, así que $\langle S \rangle \subseteq U$.
+\end{proof}
+
+\begin{definition}
+Sea $S \subseteq V$. Decimos que $S$ genera a $V$ si $\langle S \rangle = V$. También podemos decir que los elementos de $S$ generan a $V$.
+\end{definition}
+
+\subsection{Dependencia e independencia lineal.}
+
+\begin{definition}
+Sea $S=\{s_1,s_2,...,s_n\}\subseteq V$. Decimos que $S$ es linealmente dependiente si existe $s \in S$ tal que $s \in \langle S-\{s\} \rangle$.
+\end{definition}
+
+\begin{theorem}
+Sea $S=\{s_1,s_2,...,s_n\}\subseteq V$. $S$ es linealmente dependiente si y solo si $a_1s_1+a_2s_2+...+a_ns_n=0_V$ con $a_1,a_2,...,a_n \in K$, no todos cero.
+\end{theorem}
+
+\begin{proof}
+$\Rightarrow$ Supongamos que $S$ es linealmente dependiente, entonces existe $s \in S$ tal que $s \in \langle S-\{ s \} \rangle$, por tanto existen $s_1,s_2,...,s_n \in S-\{s\}$ y los escalares $a_1,a_2,...,a_n \in K$ tales que $s=a_1s_1+a_2s_2+...+a_ns_n$. Al sumar $-s$ en ambos lados de la expresión anterior obtenemos $0_V=-s+a_1s_1+a_2s_2+...+a_ns_n$, con lo cual se garantiza que no todos los escalares que multiplican a los vectores son cero, pues $-1$ multiplica a $s$.\newline \newline
+$\Leftarrow$ Supongamos que existen $a_1,a_2,...,a_n \in K$, no todos cero, tales que $a_1s_1+a_2s_2+...+a_ns_n=0_V$. Puesto que no todos los escalares son cero, supongamos sin perdida de generalidad que $a_1\neq 0$, por tanto podemos multiplicar en ambos lados de la igualdad anterior por el escalar $\dfrac{1}{a_1}$. En consecuencia obtenemos $s_1+\dfrac{a_2}{a_1}s_2+...+\dfrac{a_n}{a_1} s_n=0_V$. Luego, al sumar $-s_1$ y multiplicar por $-1$ en ambos lados nos queda que $s_1=\left(-\dfrac{a_2}{a_1}\right) s_2+...+\left( - \dfrac{a_n}{a_1}\right) s_n$, esto es, que $s_1 \in \langle S -\{ s_1 \} \rangle$. Por lo tanto $S$ es linealmente dependiente.
+\end{proof}
+
+\begin{definition}
+Sea $S \subseteq V$. Decimos que $S$ es linealmente independiente si no es linealmente dependiente.
+\end{definition}
+
+\begin{proposition}
+Si $S \subseteq V$ tal que $0_V \in S$, entonces $S$ es linealmente dependiente.
+\end{proposition}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}
+El conjunto $\emptyset$ es linealmente independiente
+\end{theorem}
+
+\begin{proof}
+Tenemos que $\emptyset$ no es linealmente dependiente, por lo tanto es linealmente independiente.
 \end{proof}
 
 \end{document}

@@ -130,5 +130,32 @@ Sea $V$ un $K-$espacio vectorial y sean $S_1\subseteq S_2\subseteq V$. Si $S_2$ 
 La demostración se sigue de hacer la contrapositiva del teorema anterior.
 \end{proof}
 
+\subsection{Bases y dimensiones.}
 
+\begin{definition}
+Sea $\beta \subseteq V$. Decimos que $\beta$ es una base para $V$ si y solo si $\beta$ es linealmente independiente y $\langle \beta \rangle=V$.
+\end{definition}
+
+\begin{theorem}
+
+Sea $V$ un espacio vectorial y $\beta = \{b_1, b_2,...,b_n\}$ un subconjunto de $V$. Luego $\beta$ es una base para $V$ si y sólo si cada vector $v \in V$ puede ser expresado de manera única como una combinación lineal de vectores de $\beta$, es decir, puede ser expresado de la forma $v = a_1 b_1 + a_2 b_2 + ...+ a_n b_n$, para escalares únicos $a_1, a_2, ..., a_n \in K$.
+
+\end{theorem}
+
+\begin{proof}
+
+$\Rightarrow$ Supongamos que $\beta$ es una base para $V$. Sea $v \in V$, entonces $v \in \langle \beta \rangle$, así que existen $a_1, a_2, ..., a_n \in K$ tal que $v = a_1 b_1 + a_2 b_2 + ...+ a_n b_n$. Ahora, supongamos que también $v = c_1 b_1 + c_2 b_2 + ...+ c_n b_n$, con $c_1,c_2,...,c_n \in K$. Entonces es claro que $v-v=0_V=(a_1 - c_1)b_1+(a_2 -c_2)b_2 +...+(a_n -c_n)b_n$. Ya que $\beta$ es linealmente independiente, $a_1 -c_1=0, a_2 -c_2=0, ..., a_n -c_n=0$, en consecuencia $a_1=c_1, a_2 =c_2, ..., a_n =c_n$, por lo tanto la representación de $v$ como combinación lineal de $\beta$ es única.\newline
+
+$\Leftarrow$ Supongamos que cada vector $v \in V$ puede ser expresado como una combinación lineal de vectores de $\beta$ con los escalares únicos $a_1, a_2, ..., a_n \in K$. Por lo tanto $\langle \beta \rangle=V$. Probemos ahora que $\beta$ es linealmente independiente. Tenemos que el elemento $0_V$ puede ser expresado como $0_V=a_1b_1+a_2b_2+...+a_nb_n$, y puesto que esta manera es única, se tiene que cada escalar $a_1, a_2, ..., a_n$ debe ser $0$, por lo tanto $\beta$ es linealmente independiente, y en consecuencia $\beta$ es una base.
+
+\end{proof}
+
+\begin{theorem}
+Si $V$ es un espacio vectorial y $S \subseteq V$ tal que $S$ es finito y genera a $V$, entonces existe $S' \subseteq S$ tal que $S'$ es una base para $V$.
+
+\end{theorem}
+
+\begin{proof}
+Si $S= \emptyset$ o $S=\{0_V\}$ entonces $V=\{0_V\}$ y como $\emptyset$ es subconjunto de cualquier conjunto, entonces $S$ es una base para $V$. De lo contrario, $V$ tendrá al menos un elemento $v_1$ no nulo. Nótese que $\{v_1\}$ es un conjunto linealmente independiente. Continúese, si es posible, escogiendo elementos $v_2,v_3,...,v_r \in V$ tales que $\{ v_1,v_2,v_3,...,v_r \}$ sea linealmente independiente. Puesto que $S$ es finito, se llegará al punto en el que $S'=\{v_1,v_2,v_3,...,v_r\}$ sea un subconjunto de $S$ linealmente independiente, de manera que al agregar otro delemento de $S$ a $S'$, éste sea linealmente dependiente. Demostremos ahora que $S'$ es una base para $V$. Como $S'$ es linealmente independiente, basta mostrar que es generador de $V$, pero como $\langle S \rangle=V$, es suficiente demostrar que $S \subseteq \langle S' \rangle$. Sea $v \in S$. Si $v \in S'$, entonces $v \in \langle S' \rangle$. Por otro lado, si $v$ no está en $S'$, la anterior construcción mostraría que $S' \cup \{v\}$ es linealmente dependiente. Así, $v \in \langle S' \rangle$, y por tanto $S \subseteq \langle S' \rangle$.
+\end{proof}
 \end{document}

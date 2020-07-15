@@ -32,17 +32,11 @@
 \subsection{Combinaciones lineales}
 
 \begin{definition}
-Sea $V$ un espacio vectorial y $S \subseteq V$, $S \neq \emptyset$. Se dice que un vector $v \in V$ es combinación lineal de elementos de $S$, si existe un conjunto finito $\{s_1,s_2,...,s_n\}\subseteq S$ y escalares $\lambda_1,\lambda_2,...\lambda_n \in K$ tales que $v=\lambda_1 s_1+\lambda_2 s_2+...+\lambda_n s_n$. Se dice también que $v$ es combinación lineal de $\{s_1,s_2,...,s_n\}$.
+Sea $V$ un espacio vectorial y $S \subseteq V$, $S \neq \emptyset$. Un vector $v \in V$ es combinación lineal de elementos de $S$, si existe un conjunto finito $\{s_1,s_2,...,s_n\}\subseteq S$ y escalares $a_1,a_2,...a_n \in K$ tal que $v=a_1 s_1+a_2 s_2+...+a_n s_n$. Se dice también que $v$ es combinación lineal de $\{s_1,s_2,...,s_n\}$.
 \end{definition}
 
 \begin{definition}
-Sea $V$ un espacio vectorial y $S=\{ s_1,s_2,...,s_n \} \subseteq V$. Definimos al conjunto generado por elementos de $S$ como
-
-\begin{equation}
-\langle S \rangle = \{\lambda_1 s_1+\lambda_2 s_2+...+\lambda_n s_n : \lambda_1,\lambda_2,...\lambda_n \in K \}
-\end{equation}
-
-Esto es, el conjunto generado por $S$ es el conjunto de todas las combinaciones lineales de los elementos de $S$.
+Sea $V$ un espacio vectorial y $S=\{ s_1,s_2,...,s_n \} \subseteq V$. El conjunto generado por $S$ es $\langle S \rangle = \{a_1 s_1+a_2 s_2+...+a_n s_n : a_1,a_2,...a_n \in K \}$. Esto es, el conjunto generado por $S$ es el conjunto de todas las combinaciones lineales de los elementos de $S$.
 \end{definition}
 
 \begin{definition}
@@ -68,7 +62,7 @@ Sea $S=\{s_1,s_2,...,s_n\}\subseteq V$. Decimos que $S$ es linealmente dependien
 \end{definition}
 
 \begin{theorem}
-Sea $S=\{s_1,s_2,...,s_n\}\subseteq V$. $S$ es linealmente dependiente si y solo si existen $a_1,a_2,...,a_n \in K$ tal que $a_1s_1+a_2s_2+...+a_ns_n=0_V$ y $a_1,a_2,...,a_n \in K$ no son todos cero.
+Sea $S=\{s_1,s_2,...,s_n\}\subseteq V$. $S$ es linealmente dependiente si y solo si existen $a_1,a_2,...,a_n \in K$ tal que $a_1s_1+a_2s_2+...+a_ns_n=0_V$ y $a_1,a_2,...,a_n $ no son todos cero.
 \end{theorem}
 
 \begin{proof}
@@ -107,10 +101,11 @@ Supongamos que $\emptyset$ es linealmente dependiente, entonces existe $s \in \e
 \end{proof}
 
 \begin{lemma}
-Si $V$ es un $K-$espacio vectorial y $S_1\subseteq S_2\subseteq V$, entonces $\langle S_1 \rangle \subseteq \langle S_2 \rangle$.
+Si $V$ es un $K-$espacio vectorial y $R\subseteq S\subseteq V$, entonces $\langle R \rangle \subseteq \langle S \rangle$.
 \end{lemma}
 
 \begin{proof}
+Supongamos que $R\subseteq S\subseteq V$, y sea $r \in \langle R \rangle$, por lo tanto existe un subconjunto $\{r_1,r_2,...,r_m \} \subseteq R$ y los escalares $a_1,a_2,...a_m \in K$ tal que $r=a_1r_1,a_2r_2,...,a_mr_m$. Como $R\subseteq S$, entonces $r_1,r_2,...,r_m \in S$, de manera que $r=a_1r_1,a_2r_2,...,a_mr_m \in \langle S \rangle$, por lo tanto $\langle R \rangle \subseteq \langle S \rangle$.
 
 \end{proof}
 
@@ -158,4 +153,42 @@ Si $V$ es un espacio vectorial y $S \subseteq V$ tal que $S$ es finito y genera 
 \begin{proof}
 Si $S= \emptyset$ o $S=\{0_V\}$ entonces $V=\{0_V\}$ y como $\emptyset$ es subconjunto de cualquier conjunto, entonces $S$ es una base para $V$. De lo contrario, $V$ tendrá al menos un elemento $v_1$ no nulo. Nótese que $\{v_1\}$ es un conjunto linealmente independiente. Continúese, si es posible, escogiendo elementos $v_2,v_3,...,v_r \in V$ tales que $\{ v_1,v_2,v_3,...,v_r \}$ sea linealmente independiente. Puesto que $S$ es finito, se llegará al punto en el que $S'=\{v_1,v_2,v_3,...,v_r\}$ sea un subconjunto de $S$ linealmente independiente, de manera que al agregar otro delemento de $S$ a $S'$, éste sea linealmente dependiente. Demostremos ahora que $S'$ es una base para $V$. Como $S'$ es linealmente independiente, basta mostrar que es generador de $V$, pero como $\langle S \rangle=V$, es suficiente demostrar que $S \subseteq \langle S' \rangle$. Sea $v \in S$. Si $v \in S'$, entonces $v \in \langle S' \rangle$. Por otro lado, si $v$ no está en $S'$, la anterior construcción mostraría que $S' \cup \{v\}$ es linealmente dependiente. Así, $v \in \langle S' \rangle$, y por tanto $S \subseteq \langle S' \rangle$.
 \end{proof}
+
+\begin{theorem}
+Sea $V$ un espacio vectorial que tiene una base $\beta$ con exactamente $n$ elementos. Sea $S=\{s_1,s_2,...,s_m\} \subseteq V$ linealmente independiente con exactamente $m$ elementos, donde $m \leq n$. Entonces, existe un subconjunto $S_1 \subseteq \beta$ que contiene exactamente $n-m$ elementos tales que $\langle S \cup S_1 \rangle=V$. 
+\end{theorem}
+
+\begin{proof}
+La demostración se hará por inducción sobre $m$. Si $m=0$, entonces $S=\emptyset$, y así $S_1=\beta$ satisface el teorema. Ahora, supongamos que que el teorema es cierto para $m$, tal que $m<n$, y demostremos que también se cumple para $m+1$. Sea $S=\{s_1,s_2,...,s_m,s_(m+1)\}$ un subconjunto de $V$ linealmente independiente, el cual contiene exactamente $m+1$ elementos. Puesto que $S=\{s_1,s_2,...,s_m\}$ también es linealmente independiente, por la hipótesis de inducción se tiene que existe un subconjunto $\{b_1,b_2,...,b_(n-m)\}$ de $\beta$ tal que $\{s_1,s_2,...,s_m\} \cup \{b_1,b_2,...,b_{n-m}\}$ genera a $V$. En consecuencia existirán escalares $a_1,...,a_m,c_1,c_2,...,c_{n-m} \in K$ tales que $y_{m+1}=a_1s_1+...+a_ms_m+c_1b_1+c_2b_2+...+c_{n-m}b_{n-m}$. Notemos que algún $b_i$, tal como $b_1$, es no nulo, de lo contrario $y_{m+1}$ es una combinación lineal de $S=\{s_1,s_2,...,s_m,s_(m+1)\}$ y eso contradice el hecho de que $S$ es linealmente independiente. Al despegar $b_1$ se obtiene $b_1=(-c_1^{-1}a_1)s_1+...+(-c_1^{-1}a_m)s_m-(-c_1^{-1})s_{m+1}+(-c_1^{-1}c_2)s_2+...+(-c_1^{-1}c_{n-m})s_{n-m}$. Entonces $b_1 \in \langle \{s_1,...,s_m,s_{m+1},b_2,...,b_{n-m} \} \rangle$, pero como $s_1,...,s_m,b_2,...,b_{n-m}$ son elementos de $ \langle \{s_1,...,s_m,s_{m+1},b_2,...,b_{n-m} \} \rangle$, se tendrá que $\{s_1,...,s_m,b_2,...,b_{n-m}\} \subseteq  \langle \{s_1,...,s_m,s_{m+1},b_2,...,b_{n-m} \} \rangle$. Por lo tanto $\langle \{s_1,...,s_m,s_{m+1},b_2,...,b_{n-m} \} \rangle = V$. Luego, al escoger $S_1=\{s_2,...,s_{n-m} \}$ demuestra que el teorema es cierto para $m+1$. Esto completa la demostración.
+\end{proof}
+
+\begin{corollary}
+Sea $V$ un espacio vectorial que tiene una base $\beta$ que contenga exactamente $n$ elementos. Entonces, cualquier subconjunto linealmente independiente de $V$ que contenga exactamente $n$ elementos es una base de $V$.
+\end{corollary}
+
+\begin{proof}
+Sea $S=\{s_1,s_2,..,s_n\}$ un conjunto de $V$ linealmente independiente que contiene exactamente $n$ elementos. Por el teorema anterior, existe $S_1 \subseteq \beta$ que contiene $n-n=0$ elementos tal que $\langle S \cup S_1\rangle =V$. Obviamente $S_1=\emptyset$; luego, $\langle S \rangle =V$. Como $S$ es también linealmente independiente, $S$ es una base para $V$.
+\end{proof}
+
+\begin{corollary}
+Sea $V$ un espacio vectorial que tiene una base $\beta$ que contenga exactamente $n$ elementos. Entonces, cualquier subconjunto de $V$ que contenga más de $n$ elementos es linealmente dependiente.
+\end{corollary}
+
+\begin{proof}
+Sea $S\subseteq V$ que contiene más de $n$ elementos. 	Supongamos que $S$ es linealmente independiente. Sea $S_1 \subset S$ con exactamente $n$ elementos . Entonces, por el corolario anterior $S_1$ es una base para $V$. Como $S_1$ es subconjunto propio de $S$, podemos tomar un elemento $s\in S$ tal que $s\notin S_1$. Como $S_1$ es base para $V$, $s\in \langle S_1 \rangle =V$. Luego, $S_1 \cup \{s\}$ es linealmente dependiente. Pero $S_1 \cup \{s\} \subseteq S$; luego, $S$ es linealmente dependiente, y esto es una contradicción. Por lo tanto, $S$ es linealmente dependiente.
+
+\end{proof}
+
+\begin{corollary}
+Sea $V$ un espacio vectorial que tiene una base $\beta$ con exactamente $n$ elementos. Entonces, toda base para $V$ contendrá exactamente $n$ elementos.
+\end{corollary}
+
+\begin{proof}
+Sea $S$ una base de $V$. Como $S$ es linealmente independiente tendrá como máximo $n$ elementos. Supongamos que $S$ contiene exactamente $m$ elementos; luego, $m\leq n$. Pero además, $S$ es una base de $V$ y $\beta$ es linealmente independiente. Entonces, aplicamos el corolario anterior intercambiando los papeles de $\beta$ y $\S$ para dar $n \leq m$. Luego $m=n$.
+\end{proof}
+
+\begin{definition}
+Un espacio vectorial $V$ es dimensionalmente finito  si tiene una base cuya cardinalidad es un número finito. La cardinalidad de una base de $V$ es la dimension de $V$, y se denota por $dim(V)$. Si un espacio vectorial no es dimensionalmente finito, se llama dimensionalmente infinito.
+\end{definition}
+
 \end{document}

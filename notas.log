@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.6.26)  10 JUL 2020 19:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.6.26)  15 JUL 2020 12:59
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -296,37 +296,51 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ]
 Cap\'{\i }tulo 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--58
+Overfull \hbox (5.38005pt too wide) in paragraph at lines 35--36
+\OT1/cmr/m/it/10 com-bi-na-ci^^Son li-neal de ele-men-tos de $\OML/cmm/m/it/10 
+S$\OT1/cmr/m/it/10 , si exis-te un con-jun-to fi-ni-to $\OMS/cmsy/m/n/10 f\OML/
+cmm/m/it/10 s[]; s[]; :::; s[]\OMS/cmsy/m/n/10 g ^^R
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 75--77
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
  []
 
-LaTeX Info: Redefining \. on input line 103.
-LaTeX Info: Redefining \% on input line 103.
+LaTeX Info: Redefining \. on input line 101.
+LaTeX Info: Redefining \% on input line 101.
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
 [5]
-LaTeX Info: Redefining \. on input line 161.
-LaTeX Info: Redefining \% on input line 161.
- [6] (./notas.aux
+Overfull \hbox (2.00105pt too wide) in paragraph at lines 162--163
+\OT1/cmr/m/n/10 tan-to $\OMS/cmsy/m/n/10 hf\OML/cmm/m/it/10 s[]; :::; s[]; s[];
+ b[]; :::; b[]\OMS/cmsy/m/n/10 gi \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 V$\OT1/cmr
+/m/n/10 . Lue-go, al es-co-ger $\OML/cmm/m/it/10 S[] \OT1/cmr/m/n/10 = \OMS/cms
+y/m/n/10 f\OML/cmm/m/it/10 s[]; :::; s[]\OMS/cmsy/m/n/10 g$
+ []
+
+LaTeX Info: Redefining \. on input line 167.
+LaTeX Info: Redefining \% on input line 167.
+[6] [7] (./notas.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 3637 strings out of 492615
- 47621 string characters out of 6131390
- 132477 words of memory out of 5000000
- 7475 multiletter control sequences out of 15000+600000
+ 3636 strings out of 492615
+ 47600 string characters out of 6131390
+ 133477 words of memory out of 5000000
+ 7474 multiletter control sequences out of 15000+600000
  13146 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,31p,1172b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,8n,31p,1677b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
@@ -339,10 +353,10 @@ s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
 s/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on notas.pdf (6 pages, 153417 bytes).
+Output written on notas.pdf (7 pages, 163305 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 80 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

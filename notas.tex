@@ -191,4 +191,12 @@ Sea $S$ una base de $V$. Como $S$ es linealmente independiente tendrá como máx
 Un espacio vectorial $V$ es dimensionalmente finito  si tiene una base cuya cardinalidad es un número finito. La cardinalidad de una base de $V$ es la dimension de $V$, y se denota por $dim(V)$. Si un espacio vectorial no es dimensionalmente finito, se llama dimensionalmente infinito.
 \end{definition}
 
+\begin{theorem}
+Sea $U\leq V$ y $dim(V)=n$. Entonces, $W$ es dimensionalmente finito y $dim(W)\leq n$. Además, si $dim(W)=n$, entonces $W=V$.
+\end{theorem}
+
+\begin{proof}
+Si $W=\{0_w\}$, $W$ es dimensionalmente finito y $dim(W)=0\leq n$. De otra manera, existe un elemento no nulo $w_1\in W$, y así $\{w_1\}$ es linealmente independiente. Continuando en esta forma, tómese elementos $w_1,w_2,...,w_k\in W$ tales que $\{w_1,w_2,...,w_k \}$ sea linealmente independiente. Este proceso debe terminar en una etapa donde $\{w_1,w_2,...,w_k \}$ sea linealmente independiente pero de manera que al añadir cualquier elemento de $W$ se tenga un conjunto linealmente dependiente. Entonces, $W$ tiene una base finita que contiene no más de $n$ elementos; esto es, $dim(W)\leq n$. Si $dim(W)=n$, entonces una base para $W$ seria un subconjunto de $V$ linealmente independiente que contuviera $n$ elementos, y esto implicaría que la base para $W$ es también una base para $V$, por tanto $W=V$.
+\end{proof}
+
 \end{document}

@@ -26,7 +26,7 @@
 
 \maketitle
 
-\chapter{Espacios vectoriales}
+\chapter{Espacios vectoriales.}
 \subsection{Espacios vectoriales}
 \subsection{Subespacios vectoriales}
 \subsection{Combinaciones lineales}
@@ -198,5 +198,43 @@ Sea $U\leq V$ y $dim(V)=n$. Entonces, $W$ es dimensionalmente finito y $dim(W)\l
 \begin{proof}
 Si $W=\{0_w\}$, $W$ es dimensionalmente finito y $dim(W)=0\leq n$. De otra manera, existe un elemento no nulo $w_1\in W$, y así $\{w_1\}$ es linealmente independiente. Continuando en esta forma, tómese elementos $w_1,w_2,...,w_k\in W$ tales que $\{w_1,w_2,...,w_k \}$ sea linealmente independiente. Este proceso debe terminar en una etapa donde $\{w_1,w_2,...,w_k \}$ sea linealmente independiente pero de manera que al añadir cualquier elemento de $W$ se tenga un conjunto linealmente dependiente. Entonces, $W$ tiene una base finita que contiene no más de $n$ elementos; esto es, $dim(W)\leq n$. Si $dim(W)=n$, entonces una base para $W$ seria un subconjunto de $V$ linealmente independiente que contuviera $n$ elementos, y esto implicaría que la base para $W$ es también una base para $V$, por tanto $W=V$.
 \end{proof}
+
+\chapter{Matrices y transformaciones lineales.}
+\subsection{Matrices}
+\subsection{Transformaciones lineales.}
+
+\begin{definition}
+Sean $V$ y $W$ espacios vectoriales sobre un campo $K$. Una función $T:V\rightarrow W$ se llama transformación lineal de $V$ en $W$ si para todo $u,v\in V$ y para todo $c\in K$, se cumple que $T(u+v)=T(u)+T(v)$ y $T(cv)=cT(v)$.
+
+\end{definition}
+
+\begin{proposition}
+
+Sean $u,v\in V$ y $c\in K$. Luego, $T:V\rightarrow W$ es una transformación lineal si y solo si $T(cu+v)=cT(u)+T(v)$.
+
+\end{proposition}
+
+\begin{proof}
+
+Como $T$ es transformación lineal, entonces $T(cu+v)=T(cu)+T(v)=cT(u)+T(v)$. La segunda implicación es análoga a la primera.
+
+\end{proof}
+
+\begin{proposition}
+
+Si $T:V\rightarrow W$ es una transformación lineal, entonces $T(0_V)=0_W$.
+
+\end{proposition}
+
+\begin{proof}
+\[ 0_V=0_V+0_V\]
+\[T(0_V)=T(0_V+0_V)\]
+\[T(0_V)=T(0_V)+T(0_V)\]
+
+Por otra parte, como $T(0_V)\in W$, entonces $T(0_V)=T(0_V)+0_W$. Luego
+
+\[T(0_V)+T(0_V)=T(0_V)+0_W\] 
+\[T(0_V)=0_W\]
+\end{proof} 
 
 \end{document}

@@ -237,4 +237,75 @@ Por otra parte, como $T(0_V)\in W$, entonces $T(0_V)=T(0_V)+0_W$. Luego
 \[T(0_V)=0_W\]
 \end{proof} 
 
+\begin{definition}
+Sean $V$ y $W$ espacios vectoriales y $T:V\rightarrow W$ una transformación lineal. El espacio nulo o kernel de $T$ es  
+\[ker(T)=\{x\in V \ |\ T(x)=0_W \}\]
+\end{definition}
+
+\begin{definition}
+Sean $V$ y $W$ espacios vectoriales y $T:V\rightarrow W$ una transformación lineal. La imagen de $T$ es un subconjunto de $W$ que se define como 
+\[Im(T)=\{T(x) \ |\ x\in V \}\]
+\end{definition}
+
+\begin{theorem}
+Si $V$ y $W$ son espacios vectoriales y $T:V\rightarrow W$ una transformación lineal, entonces $ker(T)$ y $Im(T)$ son subespacios de $V$ y $W$, respectivamente.
+\end{theorem}
+
+\begin{proof}
+Como $T(0_V)=0_W$, tenemos que $0_V\in ker(T)$. Sean $v_1,v_2 \in ker(T)$ y $c\in K$. Entonces $T(v_1+v_2)=T(v_1)+T(v_2)=0_W+0_W=0_W$, y $T(cv_1)=cT(v_1)=c0_W=0_w$. Por lo tanto $v_1,v_2\in ker(T)$ y $cv_1\in ker(T)$. Luego $ker(T)\leq V$
+
+Por otra parte, Como $T(0_V)=0_W$, tenemos que $0_W\in Im(T)$. Ahora, sean $w_1,w_2 \in Im(T)$ y $c\in K$. Entonces existen $v_1$ y $v_2$ tales que $T(v_1)=w_1$ y $T(v_2)=w_2$. Así, $T(v_1+v_2)=T(v_1)+T(v_2)=w_1+w_2$, y $T(cv_1)=cT(v_1)=cw_1$. Por lo tanto, $v_1,v_2\in Im(T)$ y $cv_1\in Im(T)$. Luego $Im(T)\leq W$.
+\end{proof}
+
+\begin{definition}
+Sean $V$ y $W$ espacios vectoriales y $T:V\rightarrow W$ una transformación lineal. La nulidad de $T$ es $nul(T)=dim(ker(T))$.
+\end{definition}
+
+\begin{definition}
+Sean $V$ y $W$ espacios vectoriales y $T:V\rightarrow W$ una transformación lineal. El rango de $T$ es $R(T)=dim(Im(T))$.
+\end{definition}
+
+\begin{theorem}
+Si $V$ y $W$ son espacios vectoriales, $V$ de dimension finita y $T:V\rightarrow W$ una transformación lineal, entonces $nul(T)+R(T)=dim(V)$.
+\end{theorem}
+
+\begin{proof}
+Supongamos que $dim(V)=n$, y sea $\{b_1,b_2,...,b_k\}$ una base para $nul(T)$. Entonces podemos extender a $\{b_1,b_2,...,b_k\}$ para que sea una base para $V$. Supongamos que esa extensión es $\beta=\{b_1,b_2,...,b_n\}$. Demostraremos que el conjunto $S=\{T(b_{k+1}),...,T(b_n)\}$ es una base para $R(T)$.
+
+Primero demostremos que $S$ genera a $R(T)$. 
+\end{proof}
+
+\begin{theorem}
+Sean $V$ y $W$ dos espacios vectoriales y $T:V\rightarrow W$ una transformación lineal. La transformación $T$ es inyectiva si y solo si $ker(T)=\{0_V\}$
+\end{theorem}
+
+\begin{proof}
+Supongamos que $T$ es inyectiva y que $v\in ker(T)$. Entonces $T(v)=T(0_V)=0_W$, y por lo tanto $v=0_V$. Así, $ker(T)=\{0_V\}$. Ahora supongamos que $ker(T)=\{0_V\}$ y que $T(v_1)=T(v_2)$. Entonces $T(v_1)-T(v_2)=T(v_1-v_2)=0_W$, por lo tanto $x-y\in ker(T)=\{0_V\}$ y en consecuencia $x-y=0_V$, esto es, $x=y$. Por lo tanto $T$ es inyectiva.
+\end{proof}
+
+\begin{theorem}
+Sean $V$ y $W$ dos espacios vectoriales de dimensiones finitas e iguales y $T:V\rightarrow W$ una transformación lineal. Entonces $T$ es inyectiva si y solo si es sobreyectiva.
+\end{theorem}
+
+\begin{proof}
+$\Rightarrow$ Supongamos que $T$ es inyectiva, entonces $ker(T)=\{0_V\}$, por lo tanto $\emptyset$ es una base para $ker(T)$, y así $nul(T)=0$, por lo tato $0+R(T)=dim(V)=dim(W)$, luego $dim(Im(T))=dim(W)$, y en consecuencia $Im(T)=W$.\newline 
+$\Leftarrow$ Supongamos que $T$ es sobreyectiva pero no es inyectiva. Entonces $nul(T)>0$, pues $\emptyset$ no es base para $ker(T)$. Como $T$ es sobreyectiva, entonces $Im(T)=W$, y así $R(T)=dim(W)=dim(V)$. Luego, $nul(T)+R(T)>dim(V)$, lo cual es una contradicción, por lo tanto $T$ es inyectiva.
+\end{proof}
+
+\begin{theorem}
+Sean $V$ y $W$ dos espacios vectoriales y $T:V\rightarrow W$ una transformación lineal. Entonces $T$ es inyectiva si y solo si $T$ lleva subconjuntos linealmente independientes de $V$ a subconjuntos linealmente independientes de $W$.
+\end{theorem}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}
+Sean $V$ y $W$ espacios vectoriales y supóngase que $\{b_1,b_2,...,b_n\}$ es una base para $V$. Para cualquier subconjunto $\{w_1,w_2,...,w_n\}\subset W$ existe exactamente una transformación lineal $T:V\rightarrow W$ tal que $T(b_i)=w_i$ para $i=1,2,...,n$.
+\end{theorem}
+
+\begin{proof}
+
+\end{proof}
+
 \end{document}

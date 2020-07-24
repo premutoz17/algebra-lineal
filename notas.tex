@@ -32,11 +32,11 @@
 \subsection{Combinaciones lineales}
 
 \begin{definition}
-Sea $V$ un espacio vectorial y $S \subseteq V$, $S \neq \emptyset$. Un vector $v \in V$ es combinación lineal de elementos de $S$, si existe un conjunto finito $\{s_1,s_2,...,s_n\}\subseteq S$ y escalares $a_1,a_2,...a_n \in K$ tal que $v=a_1 s_1+a_2 s_2+...+a_n s_n$. Se dice también que $v$ es combinación lineal de $\{s_1,s_2,...,s_n\}$.
+Sea $V$ un espacio vectorial y $S \subseteq V$, $S \neq \emptyset$. Un vector $v \in V$ es combinación lineal de elementos de $S$, si existe un conjunto finito $\{s_1,s_2,...,s_n\}\subseteq S$ y escalares $a_1,a_2,...a_n \in K$ tal que $v=a_1 s_1+a_2 s_2+...+a_n s_n$. Se dice que $v$ es combinación lineal de $\{s_1,s_2,...,s_n\}$.
 \end{definition}
 
 \begin{definition}
-Sea $V$ un espacio vectorial y $S=\{ s_1,s_2,...,s_n \} \subseteq V$. El conjunto generado por $S$ es $\langle S \rangle = \{a_1 s_1+a_2 s_2+...+a_n s_n : a_1,a_2,...a_n \in K \}$. Esto es, el conjunto generado por $S$ es el conjunto de todas las combinaciones lineales de los elementos de $S$.
+Sea $V$ un espacio vectorial y $S \subseteq V$. El conjunto generado por $S$ se denota por $\langle S \rangle$, y es el conjunto de todas las combinaciones lineales formadas por los elementos de $S$.
 \end{definition}
 
 \begin{definition}
@@ -58,7 +58,7 @@ Sea $S \subseteq V$. Decimos que $S$ genera a $V$ si $\langle S \rangle = V$. Ta
 \subsection{Dependencia e independencia lineal.}
 
 \begin{definition}
-Sea $S=\{s_1,s_2,...,s_n\}\subseteq V$. Decimos que $S$ es linealmente dependiente si existe $s \in S$ tal que $s \in \langle S-\{s\} \rangle$.
+Sea $S\subseteq V$. Decimos que $S$ es linealmente dependiente si existe $s \in S$ tal que $s \in \langle S-\{s\} \rangle$.
 \end{definition}
 
 \begin{theorem}
@@ -77,7 +77,7 @@ Sea $S \subseteq V$. Decimos que $S$ es linealmente independiente si y solo si n
 Por la equivalencia lógica $(P \Leftrightarrow \exists x (Q \wedge S)) \Leftrightarrow (\neg P \Leftrightarrow \forall x (Q\Rightarrow \neg S))$, el teorema anterior es equivalente a la siguiente proposición que enunciaremos como corolario.
 
 \begin{corollary}
-Sea $S \subseteq V$. $S$ es linealmente independiente si y solo si para todo $a_1,a_2,...,a_n \in K$ tal que si $a_1s_1+a_2s_2+...+a_ns_n=0_V$ entonces $a_1,a_2,...,a_n$ son todos cero.
+Sea $S=\{s_1,s_2,...,s_n\}\subseteq V$. $S$ es linealmente independiente si y solo si para todo $a_1,a_2,...,a_n \in K$ tal que si $a_1s_1+a_2s_2+...+a_ns_n=0_V$ entonces $a_1,a_2,...,a_n$ son todos cero.
 \end{corollary}
 
 \begin{proof}
@@ -105,7 +105,7 @@ Si $V$ es un $K-$espacio vectorial y $R\subseteq S\subseteq V$, entonces $\langl
 \end{lemma}
 
 \begin{proof}
-Supongamos que $R\subseteq S\subseteq V$, y sea $r \in \langle R \rangle$, por lo tanto existe un subconjunto $\{r_1,r_2,...,r_m \} \subseteq R$ y los escalares $a_1,a_2,...a_m \in K$ tal que $r=a_1r_1,a_2r_2,...,a_mr_m$. Como $R\subseteq S$, entonces $r_1,r_2,...,r_m \in S$, de manera que $r=a_1r_1,a_2r_2,...,a_mr_m \in \langle S \rangle$, por lo tanto $\langle R \rangle \subseteq \langle S \rangle$.
+Supongamos que $R\subseteq S\subseteq V$, y sea $r \in \langle R \rangle$, por lo tanto existe un subconjunto finito $\{r_1,r_2,...,r_m \} \subseteq R$ y los escalares $a_1,a_2,...a_m \in K$ tal que $r=a_1r_1,a_2r_2,...,a_mr_m$. Como $R\subseteq S$, entonces $r_1,r_2,...,r_m \in S$, de manera que $r=a_1r_1,a_2r_2,...,a_mr_m \in \langle S \rangle$, por lo tanto $\langle R \rangle \subseteq \langle S \rangle$.
 
 \end{proof}
 

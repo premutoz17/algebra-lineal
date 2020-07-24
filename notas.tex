@@ -227,14 +227,22 @@ Si $T:V\rightarrow W$ es una transformación lineal, entonces $T(0_V)=0_W$.
 \end{proposition}
 
 \begin{proof}
-\[ 0_V=0_V+0_V\]
-\[T(0_V)=T(0_V+0_V)\]
-\[T(0_V)=T(0_V)+T(0_V)\]
+\[ 
+\begin{split}
+0_V &=0_V+0_V \\
+T(0_V) &= T(0_V+0_V) \\
+T(0_V) &= T(0_V)+T(0_V) \\
+\end{split}
+\]
 
 Por otra parte, como $T(0_V)\in W$, entonces $T(0_V)=T(0_V)+0_W$. Luego
+\[ 
+\begin{split}
+T(0_V)+T(0_V) &= T(0_V)+0_W \\
+T(0_V) &= 0_W
+\end{split}
+\]
 
-\[T(0_V)+T(0_V)=T(0_V)+0_W\] 
-\[T(0_V)=0_W\]
 \end{proof} 
 
 \begin{definition}
@@ -275,6 +283,14 @@ Supongamos que $dim(V)=n$, y sea $\{b_1,b_2,...,b_k\}$ una base para $nul(T)$. E
 Primero demostremos que $S$ genera a $R(T)$. 
 \end{proof}
 
+\begin{corollary}
+Sean $V$ y $W$ espacios vectoriales y sea $T:V\rightarrow W$ una transformación lineal. Si $V$ tiene una base $\beta$, entonces $Im(T)=\langle T(\beta)\rangle$.
+\end{corollary}
+
+\begin{proof}
+Se sigue de la demostración del teorema anterior. 
+\end{proof}
+
 \begin{theorem}
 Sean $V$ y $W$ dos espacios vectoriales y $T:V\rightarrow W$ una transformación lineal. La transformación $T$ es inyectiva si y solo si $ker(T)=\{0_V\}$
 \end{theorem}
@@ -308,7 +324,104 @@ Sean $V$ y $W$ espacios vectoriales y supóngase que $\{b_1,b_2,...,b_n\}$ es un
 
 \end{proof}
 
-\subsection{Matrices}
+\begin{definition}
+Sean $V$ y $W$ espacios vectoriales. Decimos que $V$ es isomorfo a $W$, si existe una transformación lineal $T:V \rightarrow W$ que sea invertible. Tal transformación lineal se llama isomorfismo de $V$ a $W$.
+\end{definition}
+
+\begin{proposition}
+Si $V$ y $W$ son espacios vectoriales y $T:V\rightarrow W$ una transformación lineal con inversa $T^{-1}$, entonces$T^{-1}$ también es una transformación lineal.
+\end{proposition}
+
+\begin{proof}
+Sean $w_1,w_2 \in W$ y $c\in K$. Cómo $T$ es biyectiva, existen los vectores únicos $v_1,v_2 \in V$ tales que $T(v_1)=w_1$ y $T(v_2)=w_2$. Entonces $T^{-1}(w_1)=v_1$ y $T^{-1}(w_2)=v_2$, así
+\[
+\begin{split}
+T^{-1}(cw_1+w_2) &= T^{-1}(cT(v_1)+T(v_2)) \\
+&= T^{-1}(T(cv_1+v_2)) \\
+&= cv_1+v_2 \\
+&= cT^{-1}(w_1)+T^{-1}(w_2)
+\end{split}
+\]
+\end{proof}
+
+\begin{theorem}
+Sean $V$ y $W$ $K-$espacios vectoriales de dimensiones finitas. El espacio $V$ es isomorfo a $W$ si y solo si $dim(V)=dim(W)$.
+\end{theorem}
+
+\begin{proof}
+$\Rightarrow$ Supongamos que $V$ es isomorfo a $W$, y que $\beta$ es una base para $V$. Entonces existe una transformación $T:V\rightarrow W$ biyectiva, y por tanto, invertible. Puesto que $T$ es inyectiva, entonces $T(\beta)$ es un subconjunto linealmente independiente de $W$. Luego, $T$ es sobreyectiva, entonces $\langle T(\beta)\rangle =Im(T)=W$, por lo que $T(\beta)$ es una base para $W$, así $dim(V)=dime(W)$.
+
+$\Leftarrow$ Supongamos que $dim(V)=dim(W)$. Sean $\beta=\{b_1,b_2,...,b_n\}$ y  
+$\alpha=\{a_1,a_2,...,a_n\}$ bases para $V$ y $W$ respectivamente. Entonces existe una transformación lineal $T:V\rightarrow W$ tal que $T(b_i)=a_i$ con $i=1,2,...,n$. Luego, como $\langle T(\beta)\rangle =Im(T)=\langle \alpha\rangle =W$, entonces $T$ es sobreyectiva, y como $V$ y $W$ tienen la misma dimensión, se cumple que también $T$ es inyectiva. Por lo tanto $V$ es isomorfo a $W$.
+\end{proof}
+
+\begin{definition}
+Sean $V$ y $W$ espacios vectoriales sobre un campo $K$. El conjunto de todas las transformaciones lineales de $V$ a $W$ es $L(V,W)$. Si $V=W$ escribimos simplemente $L(V)$.
+\end{definition}
+
+\begin{proposition}
+El conjunto $L(V,W)$ es cerrado bajo la suma de funciones.
+\end{proposition}
+
+\begin{proof}
+Sean $T,U \in L(V,W)$ y $v,s \in V$. Entonces
+\[
+\begin{split}
+(T+U)(v+s) &= T(v+s)+U(v+s) \\
+&=T(v)+T(s)+U(v)+U(s) \\
+&=T(v)+U(v)+T(s)+U(s) \\
+&=(T+U)(v)+(T+U)(s) \\
+\end{split}
+\]
+\end{proof}
+
+\begin{proposition}
+Si $T\in L(V,W)$ y $c\in K$, entonces $(cT)\in L(V,W)$.
+\end{proposition}
+
+\begin{proof}
+Sean $T\in L(V,W)$, $v,s\in V$ y $c\in K$. Entonces
+\[
+\begin{split}
+(cT)(v+s) &=cT(v+s) \\
+&=c(T(v)+T(s)) \\
+&=cT(v)+cT(s) \\
+&=(cT)(v)+(cT)(s)
+\end{split}
+\]
+\end{proof}
+
+\begin{theorem}
+El conjunto $L(V,W)$ con las operaciones de suma de funciones y multiplicación por un escalar en $K$, es un $K-$espacio vectorial.
+\end{theorem}
+
+\begin{proof}
+Sean $T,U \in L(V,W)$, $v\in V$ y $c\in K$. Tomamos como $T_0$ a la transformación lineal nula, luego
+\[
+\begin{split}
+cT(v)+U(v) &=(cT)(v)+U(v) \\
+&=(cT+U)(v)
+\end{split}
+\]
+Por las proposiciones anteriores tenemos que $(cT+U)\in L(V,W)$. Por lo tanto $L(V,W)$ es un $K-$espacio vectorial.
+\end{proof}
+
+\begin{theorem}
+Si $V$, $W$ y $Z$ son espacios vectoriales y $T:V \rightarrow W$, $U:W \rightarrow Z$ transformaciones lineales, entonces $U\circ T:V \rightarrow Z$ es una transformación lineal.
+\end{theorem}
+
+\begin{proof}
+Sean $v,s\in V$ y $c\in K$. Entonces
+\[
+\begin{split}
+(U\circ T)(cv+s) &=U(T(cv+s)) \\
+&=U(cT(v)+T(s)) \\
+&=U(cT(v))+U(T(s)) \\
+&=cU(T(v))+U(T(s)) \\
+&=c(U \circ T)(v)+(U\circ T)(s)
+\end{split}
+\]
+\end{proof}
 
 \subsection{Representación matricial de una transformación lineal}
 

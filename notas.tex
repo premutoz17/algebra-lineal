@@ -46,6 +46,7 @@ $\langle \emptyset \rangle=\{0_V\}$
 \begin{theorem}
 Sea $V$ un espacio vectorial y $S \subseteq V$, $S \neq \emptyset$, entonces $\langle S \rangle \leq V$ y $\langle S \rangle$ es el subespacio de $V$ más pequeño que contiene a $S$ (es decir, que $\langle S \rangle$ es un subconjunto de todos los subespacios de $V$ que contienen a $S$).
 \end{theorem}
+
 \begin{proof}
 Probemos primero que $\langle S \rangle \leq V$. Como $S \neq \emptyset$, al menos $0_V \in \langle S \rangle$. Luego, sean $u,v \in \langle S \rangle$, por tanto $u$ y $v$ son combinaciones lineales de elementos de $S$, de manera que existen $s_1,s_2,...s_n,t_1,t_2,...,t_n \in S$ tales que $v=a_1s_1+...+a_ns_n$ y $u=b_1t_1+...+b_nt_n$, con $a_1,...a_n,b_1,...,b_n \in K$. Ahora bien, es claro que $v+u=a_1s_1+...+a_ns_n+b_1t_1+...+b_nt_n$ y $cu=cb_1t_1+...+cb_nt_n$ pertenecen a $\langle S \rangle$, para cualquier $c \in K$. Por lo tanto $\langle S \rangle \leq V$.\newline \newline
 Por otra parte, sea $U$ un subespacio de $V$ que contiene a $S$. Sea $v \in \langle S \rangle$, entonces $v=a_1s_1+...+a_ns_n$, con $a_1,...,a_n \in K$ y $s_1,...,s_n \in S$, además como $S \subseteq U$ entonces $v=a_1s_1+a_2s_2+...+a_ns_n \in U$, pues los subespacios vectoriales son cerrados bajo la suma y bajo el producto por escalares. Por tanto tenemos que si $v \in \langle S \rangle$ entonces $v \in U$, así que $\langle S \rangle \subseteq U$.
@@ -62,7 +63,7 @@ Sea $S\subseteq V$. Decimos que $S$ es linealmente dependiente si existe $s \in 
 \end{definition}
 
 \begin{theorem}
-Sea $S=\{s_1,s_2,...,s_n\}\subseteq V$. $S$ es linealmente dependiente si y solo si existen $a_1,a_2,...,a_n \in K$ tal que $a_1s_1+a_2s_2+...+a_ns_n=0_V$ y $a_1,a_2,...,a_n $ no son todos cero.
+Sea $S=\{s_1,s_2,...,s_n\}\subset V$. $S$ es linealmente dependiente si y solo si existen $a_1,a_2,...,a_n \in K$ tal que $a_1s_1+a_2s_2+...+a_ns_n=0_V$ y $a_1,a_2,...,a_n $ no son todos cero.
 \end{theorem}
 
 \begin{proof}
@@ -77,7 +78,7 @@ Sea $S \subseteq V$. Decimos que $S$ es linealmente independiente si y solo si n
 Por la equivalencia lógica $(P \Leftrightarrow \exists x (Q \wedge S)) \Leftrightarrow (\neg P \Leftrightarrow \forall x (Q\Rightarrow \neg S))$, el teorema anterior es equivalente a la siguiente proposición que enunciaremos como corolario.
 
 \begin{corollary}
-Sea $S=\{s_1,s_2,...,s_n\}\subseteq V$. $S$ es linealmente independiente si y solo si para todo $a_1,a_2,...,a_n \in K$ tal que si $a_1s_1+a_2s_2+...+a_ns_n=0_V$ entonces $a_1,a_2,...,a_n$ son todos cero.
+Sea $S=\{s_1,s_2,...,s_n\}\subset V$. $S$ es linealmente independiente si y solo si para todo $a_1,a_2,...,a_n \in K$ tal que si $a_1s_1+a_2s_2+...+a_ns_n=0_V$ entonces $a_1,a_2,...,a_n$ son todos cero.
 \end{corollary}
 
 \begin{proof}
@@ -133,15 +134,15 @@ Sea $\beta \subseteq V$. Decimos que $\beta$ es una base para $V$ si y solo si $
 
 \begin{theorem}
 
-Sea $V$ un espacio vectorial y $\beta = \{b_1, b_2,...,b_n\}$ un subconjunto de $V$. Luego $\beta$ es una base para $V$ si y sólo si cada vector $v \in V$ puede ser expresado de manera única como una combinación lineal de vectores de $\beta$, es decir, puede ser expresado de la forma $v = a_1 b_1 + a_2 b_2 + ...+ a_n b_n$, para escalares únicos $a_1, a_2, ..., a_n \in K$.
+Sea $V$ un espacio vectorial y $\beta\subseteq V$. Luego $\beta$ es una base para $V$ si y sólo si cada vector $v \in V$ puede ser expresado de manera única como una combinación lineal de vectores de $\beta$.
 
 \end{theorem}
 
 \begin{proof}
 
-$\Rightarrow$ Supongamos que $\beta$ es una base para $V$. Sea $v \in V$, entonces $v \in \langle \beta \rangle$, así que existen $a_1, a_2, ..., a_n \in K$ tal que $v = a_1 b_1 + a_2 b_2 + ...+ a_n b_n$. Ahora, supongamos que también $v = c_1 b_1 + c_2 b_2 + ...+ c_n b_n$, con $c_1,c_2,...,c_n \in K$. Entonces es claro que $v-v=0_V=(a_1 - c_1)b_1+(a_2 -c_2)b_2 +...+(a_n -c_n)b_n$. Ya que $\beta$ es linealmente independiente, $a_1 -c_1=0, a_2 -c_2=0, ..., a_n -c_n=0$, en consecuencia $a_1=c_1, a_2 =c_2, ..., a_n =c_n$, por lo tanto la representación de $v$ como combinación lineal de $\beta$ es única.\newline
+$\Rightarrow$ Supongamos que $\beta$ es una base para $V$. Sea $v \in V$, entonces $v \in \langle \beta \rangle$, así que existe un subconjunto finito $\{b_1,b_2,...,b_n\}\subseteq \beta$ y los escalares $a_1, a_2, ..., a_n \in K$ tal que $v = a_1 b_1 + a_2 b_2 + ...+ a_n b_n$. Ahora, supongamos que esta representación no es única, que también $v = c_1 b_1 + c_2 b_2 + ...+ c_n b_n$, con $c_1,c_2,...,c_n \in K$. Entonces es claro que $v-v=0_V=(a_1 - c_1)b_1+(a_2 -c_2)b_2 +...+(a_n -c_n)b_n$. Ya que $\beta$ es linealmente independiente, $a_1 -c_1=0, a_2 -c_2=0, ..., a_n -c_n=0$, en consecuencia $a_1=c_1, a_2 =c_2, ..., a_n =c_n$, por lo tanto la representación de $v$ como combinación lineal de $\beta$ es única.\newline
 
-$\Leftarrow$ Supongamos que cada vector $v \in V$ puede ser expresado como una combinación lineal de vectores de $\beta$ con los escalares únicos $a_1, a_2, ..., a_n \in K$. Por lo tanto $\langle \beta \rangle=V$. Probemos ahora que $\beta$ es linealmente independiente. Tenemos que el elemento $0_V$ puede ser expresado como $0_V=a_1b_1+a_2b_2+...+a_nb_n$, y puesto que esta manera es única, se tiene que cada escalar $a_1, a_2, ..., a_n$ debe ser $0$, por lo tanto $\beta$ es linealmente independiente, y en consecuencia $\beta$ es una base.
+$\Leftarrow$ Supongamos que para cada vector $v \in V$ existe un subconjunto finito $\{b_1,b_2,...,b_n\} \subseteq \beta$ y los escalares únicos $a_1, a_2, ..., a_n \in K$, de tal forma que $v= a_1 b_1 + a_2 b_2 + ...+ a_n b_n$. Por lo tanto $\langle \beta \rangle=V$. Probemos ahora que $\beta$ es linealmente independiente. Tenemos que el elemento $0_V$ puede ser expresado como $0_V=a_1b_1+a_2b_2+...+a_nb_n$, y puesto que esta manera es única, se tiene que cada escalar $a_1, a_2, ..., a_n$ debe ser forzosamente $0$, por lo tanto $\beta$ es linealmente independiente, y en consecuencia $\beta$ es una base.
 
 \end{proof}
 

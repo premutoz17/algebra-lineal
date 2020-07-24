@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.7.23)  24 JUL 2020 15:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.7.23)  24 JUL 2020 18:03
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -303,45 +303,45 @@ cmm/m/it/10 s[]; s[]; :::; s[]\OMS/cmsy/m/n/10 g ^^R
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--52
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 69--71
+Underfull \hbox (badness 10000) in paragraph at lines 70--72
 
  []
 
-LaTeX Info: Redefining \. on input line 101.
-LaTeX Info: Redefining \% on input line 101.
+LaTeX Info: Redefining \. on input line 102.
+LaTeX Info: Redefining \% on input line 102.
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
  []
 
 [5]
-Overfull \hbox (2.00105pt too wide) in paragraph at lines 162--163
+Overfull \hbox (2.00105pt too wide) in paragraph at lines 163--164
 \OT1/cmr/m/n/10 tan-to $\OMS/cmsy/m/n/10 hf\OML/cmm/m/it/10 s[]; :::; s[]; s[];
  b[]; :::; b[]\OMS/cmsy/m/n/10 gi \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 V$\OT1/cmr
 /m/n/10 . Lue-go, al es-co-ger $\OML/cmm/m/it/10 S[] \OT1/cmr/m/n/10 = \OMS/cms
 y/m/n/10 f\OML/cmm/m/it/10 s[]; :::; s[]\OMS/cmsy/m/n/10 g$
  []
 
-LaTeX Info: Redefining \. on input line 167.
-LaTeX Info: Redefining \% on input line 167.
+LaTeX Info: Redefining \. on input line 168.
+LaTeX Info: Redefining \% on input line 168.
 [6] [7]
-LaTeX Info: Redefining \. on input line 202.
-LaTeX Info: Redefining \% on input line 202.
+LaTeX Info: Redefining \. on input line 203.
+LaTeX Info: Redefining \% on input line 203.
  [8]
 Cap\'{\i }tulo 2.
 [9
 
 ]
-LaTeX Info: Redefining \. on input line 304.
-LaTeX Info: Redefining \% on input line 304.
+LaTeX Info: Redefining \. on input line 305.
+LaTeX Info: Redefining \% on input line 305.
  [10] [11]
-LaTeX Info: Redefining \. on input line 423.
-LaTeX Info: Redefining \% on input line 423.
+LaTeX Info: Redefining \. on input line 424.
+LaTeX Info: Redefining \% on input line 424.
  [12] [13] (./notas.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
@@ -366,7 +366,7 @@ s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
 s/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on notas.pdf (13 pages, 185555 bytes).
+Output written on notas.pdf (13 pages, 185568 bytes).
 PDF statistics:
  99 PDF objects out of 1000 (max. 8388607)
  70 compressed objects within 1 object stream

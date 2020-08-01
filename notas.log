@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.7.28)  1 AUG 2020 15:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.7.28)  1 AUG 2020 18:46
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -343,9 +343,16 @@ LaTeX Info: Redefining \% on input line 305.
 LaTeX Info: Redefining \. on input line 418.
 LaTeX Info: Redefining \% on input line 418.
  [12] [13]
-LaTeX Info: Redefining \. on input line 472.
-LaTeX Info: Redefining \% on input line 472.
- [14] (./notas.aux
+Overfull \hbox (13.41472pt too wide) in paragraph at lines 469--470
+[]\OT1/cmr/m/n/10 Por el iso-mor-fis-mo $^^H$ se tie-ne que $\OML/cmm/m/it/10 d
+im\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 V; W\OT1
+/cmr/m/n/10 )) = \OML/cmm/m/it/10 dim\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M[]\OT1/
+cmr/m/n/10 (\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 ))$,
+ []
+
+LaTeX Info: Redefining \. on input line 480.
+LaTeX Info: Redefining \% on input line 480.
+[14] (./notas.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
@@ -371,7 +378,7 @@ sl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on notas.pdf (14 pages, 210283 bytes).
+Output written on notas.pdf (14 pages, 210582 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  78 compressed objects within 1 object stream

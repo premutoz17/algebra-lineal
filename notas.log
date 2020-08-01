@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.7.23)  24 JUL 2020 18:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.7.28)  1 AUG 2020 14:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -340,17 +340,17 @@ Cap\'{\i }tulo 2.
 LaTeX Info: Redefining \. on input line 305.
 LaTeX Info: Redefining \% on input line 305.
  [10] [11]
-LaTeX Info: Redefining \. on input line 424.
-LaTeX Info: Redefining \% on input line 424.
+LaTeX Info: Redefining \. on input line 418.
+LaTeX Info: Redefining \% on input line 418.
  [12] [13] (./notas.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 3636 strings out of 492615
- 47600 string characters out of 6131390
- 134476 words of memory out of 5000000
- 7474 multiletter control sequences out of 15000+600000
+ 3638 strings out of 492615
+ 47631 string characters out of 6131390
+ 134479 words of memory out of 5000000
+ 7476 multiletter control sequences out of 15000+600000
  13146 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,31p,1677b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -366,7 +366,7 @@ s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
 s/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on notas.pdf (13 pages, 185568 bytes).
+Output written on notas.pdf (13 pages, 191115 bytes).
 PDF statistics:
  99 PDF objects out of 1000 (max. 8388607)
  70 compressed objects within 1 object stream

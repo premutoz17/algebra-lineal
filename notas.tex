@@ -361,33 +361,34 @@ Sean $V$ y $W$ espacios vectoriales sobre un campo $K$. El conjunto de todas las
 \end{definition}
 
 \begin{proposition}
-El conjunto $L(V,W)$ es cerrado bajo la suma de funciones.
+Si $T,U \in L(V,W)$, entonces $T+U \in L(V,W).$
 \end{proposition}
 
 \begin{proof}
-Sean $T,U \in L(V,W)$ y $v,s \in V$. Entonces
+Sean $T,U \in L(V,W)$; $v,s \in V$ y $c \in K$. Entonces
 \[
 \begin{split}
-(T+U)(v+s) &= T(v+s)+U(v+s) \\
-&=T(v)+T(s)+U(v)+U(s) \\
-&=T(v)+U(v)+T(s)+U(s) \\
-&=(T+U)(v)+(T+U)(s) \\
+(T+U)(cv+s) &= T(cv+s)+U(cv+s) \\
+&=cT(v)+T(s)+cU(v)+U(s) \\
+&=cT(v)+cU(v)+T(s)+U(s) \\
+&=c[T(v)+U(v)]+T(s)+U(s) \\
+&=c[(T+U)(v)]+(T+U)(s) \\
 \end{split}
 \]
 \end{proof}
 
 \begin{proposition}
-Si $T\in L(V,W)$ y $c\in K$, entonces $(cT)\in L(V,W)$.
+Si $T\in L(V,W)$ y $a\in K$, entonces $(aT)\in L(V,W)$.
 \end{proposition}
 
 \begin{proof}
-Sean $T\in L(V,W)$, $v,s\in V$ y $c\in K$. Entonces
+Sean $T\in L(V,W)$; $v,s\in V$ y $a,c\in K$. Entonces
 \[
 \begin{split}
-(cT)(v+s) &=cT(v+s) \\
-&=c(T(v)+T(s)) \\
-&=cT(v)+cT(s) \\
-&=(cT)(v)+(cT)(s)
+(aT)(cv+s) &=aT(cv+s) \\
+&=a(T(cv)+T(s)) \\
+&=caT(v)+aT(s) \\
+&=c(aT)(v)+(aT)(s)
 \end{split}
 \]
 \end{proof}
@@ -397,14 +398,7 @@ El conjunto $L(V,W)$ con las operaciones de suma de funciones y multiplicación 
 \end{theorem}
 
 \begin{proof}
-Sean $T,U \in L(V,W)$, $v\in V$ y $c\in K$. Tomamos como $T_0$ a la transformación lineal nula, luego
-\[
-\begin{split}
-cT(v)+U(v) &=(cT)(v)+U(v) \\
-&=(cT+U)(v)
-\end{split}
-\]
-Por las proposiciones anteriores tenemos que $(cT+U)\in L(V,W)$. Por lo tanto $L(V,W)$ es un $K-$espacio vectorial.
+Definiendo a la transformación nula como $T_0(v)=0$, $\forall v \in V$ y con las proposiciones anteriores, la demostración es bastante sencilla.
 \end{proof}
 
 \begin{theorem}
@@ -425,5 +419,44 @@ Sean $v,s\in V$ y $c\in K$. Entonces
 \end{proof}
 
 \subsection{Representación matricial de una transformación lineal}
+
+\begin{definition}
+Sea $V$ un espacio vectorial dimensionalmente finito. Una base ordenada para $V$ es una base para $V$ establecida con un orden especifico; es decir, una secuencia finita de elementos de $V$ que son linealmente independientes y que generan a $V$.
+\end{definition}
+
+\begin{definition}
+Sea $\beta =\{ b_1,b_2,...,b_n\}$ una base ordenada de un espacio vectorial $V$. Para $v\in V$ definimos el vector coordenado de $v$ relativo a $\beta$, denotado por $[ v ]_{\beta}$, mediante
+\[
+[v]_{\beta}=\left( \begin{array}{c} v_1\\\vdots\\ v_n\\ \end{array} \right)
+\]
+donde
+\[
+v=\sum_{i=1}^{n}v_i b_i
+\]
+\end{definition}
+
+\begin{definition}
+Sean $V$ y $W$ dos espacios vectoriales con bases ordenadas $\beta=\{b_1,b_2,...,b_n\}$ y $\gamma=\{y_1,y_2,...,y_m\}$ respectivamente. Sea $T:V \rightarrow W$ lineal. Denotamos a la matriz de $m\times n$ que representa a $T$, como $[T]\beta ^{\gamma}$; y se define por $([T]\beta ^{\gamma}){ij}=v{ij}$, tal que
+\[
+T(b_j)=\sum_{i=1}^{m}v_{ij}y_i \ \ para \ \ j=1,2,...,n.
+\]
+Si $\beta=\gamma$ escribimos simplemente $[T]_{\beta}$.
+\end{definition}
+
+\begin{theorem}
+Sean $V$ y $W$ espacios vectoriales dimensionalmente finitos con bases $\beta$ y $\gamma$ respectivamente, y sean $U,T:V \rightarrow W$ transformaciones lineales. Entonces $[T+U]_{\beta} ^{\gamma}=[T]_{\beta} ^{\gamma} +[U]_{\beta} ^{\gamma}$ y $[cT]_{\beta} ^{\gamma} = c[T]_{\beta} ^{\gamma}$.
+\end{theorem}
+
+\begin{proof}
+
+\end{proof} 
+
+\begin{theorem}
+Sean $V$, $W$ y $Z$ espacios vectoriales dimensionalmente finitos con bases ordenadas $\alpha$, $\beta$ y $\gamma$, respectivamente. Sean $T:V \rightarrow W$ y $U:W \rightarrow Z$ transformaciones lineales. Entonces $[U\circ T]_{\alpha} ^{\gamma}=[U]_{\beta} ^{\gamma} [T]_{\alpha} ^{\beta}$
+\end{theorem}
+
+\begin{proof}
+
+\end{proof}
 
 \end{document}

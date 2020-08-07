@@ -205,7 +205,7 @@ Si $W=\{0_w\}$, $W$ es dimensionalmente finito y $dim(W)=0\leq n$. De otra maner
 \subsection{Transformaciones lineales.}
 
 \begin{definition}
-Sean $V$ y $W$ espacios vectoriales sobre un campo $K$. Una función $T:V\rightarrow W$ se llama transformación lineal de $V$ en $W$ si para todo $u,v\in V$ y para todo $c\in K$, se cumple que $T(u+v)=T(u)+T(v)$ y $T(cv)=cT(v)$.
+Sean $V$ y $W$ espacios vectoriales sobre un campo $K$. Una función $T:V\rightarrow W$ se llama transformación lineal de $V$ en $W$ si para todo $u,v\in V$ y para todo $c\in K$, se cumple que $T(u+v)=T(u)+T(v)$ y $T(cv)=cT(v)$. Si $V=W$, a la transformación lineal se le llama operador lineal.
 
 \end{definition}
 
@@ -330,7 +330,7 @@ Sean $V$ y $W$ espacios vectoriales. Decimos que $V$ es isomorfo a $W$, si exist
 \end{definition}
 
 \begin{proposition}
-Si $V$ y $W$ son espacios vectoriales y $T:V\rightarrow W$ una transformación lineal con inversa $T^{-1}$, entonces$T^{-1}$ también es una transformación lineal.
+Si $V$ y $W$ son espacios vectoriales y $T:V\rightarrow W$ una transformación lineal con inversa $T^{-1}$, entonces $T^{-1}$ también es una transformación lineal.
 \end{proposition}
 
 \begin{proof}
@@ -357,7 +357,7 @@ $\alpha=\{a_1,a_2,...,a_n\}$ bases para $V$ y $W$ respectivamente. Entonces exis
 \end{proof}
 
 \begin{definition}
-Sean $V$ y $W$ espacios vectoriales sobre un campo $K$. El conjunto de todas las transformaciones lineales de $V$ a $W$ es $L(V,W)$. Si $V=W$ escribimos simplemente $L(V)$.
+Sean $V$ y $W$ espacios vectoriales sobre un campo $K$. El conjunto de todas las transformaciones lineales de $V$ a $W$ es $L(V,W)$. Si $V=W$ escribimos simplemente $L(V)$, que sería el conjunto de todos los operadores lineales en $V$.
 \end{definition}
 
 \begin{proposition}
@@ -418,6 +418,8 @@ Sean $v,s\in V$ y $c\in K$. Entonces
 \]
 \end{proof}
 
+%Agregar definición de k-algebra y su teorema
+
 \subsection{Representación matricial de una transformación lineal}
 
 \begin{definition}
@@ -440,7 +442,7 @@ Sean $V$ y $W$ dos espacios vectoriales con bases ordenadas $\beta=\{b_1,b_2,...
 \[
 T(b_j)=\sum_{i=1}^{m}v_{ij}y_i \ \ para \ \ j=1,2,...,n.
 \]
-Si $\beta=\gamma$ escribimos simplemente $[T]_{\beta}$.
+Si $\beta=\gamma$ escribimos simplemente $[T]_{\beta}$. Nótese que la representación matricial de un operador lineal es una matriz cuadrada.
 \end{definition}
 
 \begin{proposition}
@@ -476,5 +478,38 @@ Sean $V$, $W$ y $Z$ espacios vectoriales dimensionalmente finitos con bases orde
 \begin{proof}
 
 \end{proof}
+
+%Agregar teorema 2.21
+\subsection{Matriz de cambio de coordenadas y matrices similares.}
+\begin{definition}
+Sean $\beta$ y $\beta '$ dos bases ordenadas para un espacio vectorial $V$ dimensionalmente finito. La matriz de cambio de base de coordenadas es $Q=[I_V]_{\beta '} ^{\beta}$.
+\end{definition}
+
+%Agregar antes teorema 2.16 como lema
+
+\begin{theorem}
+Sean $\beta$ y $\beta '$ dos bases ordenadas para un espacio vectorial $V$ dimensionalmente finito y $Q=[I_V]_{\beta '} ^{\beta}$ la matriz de cambio de base de coordenadas. Entonces \newline
+a) $Q$ es invertible. \newline
+b) Para toda $v\in V$, $[v]_{\beta}=Q[v]_{\beta'}$.
+\end{theorem}
+
+\begin{proof} %Correguir
+Para el inciso a), tenemos que $I_V$ es invertible, por tanto al aplicarle el isomorfismo $\Phi$ a la inversa de $I_V$ obtenemos a la inversa de $Q$. Por otra parte, para el inciso b), tenemos que para toda $v\in V$, $[v]_{\beta}=[I_{V}(v)]_{\beta}=[I{V}]_{\beta '} ^{\beta} [v]_{\beta'}=Q[v]_{\beta'}$.
+\end{proof}
+
+\begin{definition}
+Sean $A$ y $B$ matrices de $n \times n$ con entradas en el campo $K$. Decimos que $B$ es similar a $A$ si existe una matriz invertible $Q\in M_{n \times n}(K)$ tal que $B=Q^{-1}AQ$.
+\end{definition}
+
+\begin{theorem}
+La relación de ser similar en el conjunto de matrices cuadradas es una relación de equivalencia.
+\end{theorem}
+
+\begin{proof}
+
+\end{proof}
+
+\chapter{Diagonalización}
+\subsection{Eigenvalores y eigenvectores}
 
 \end{document}

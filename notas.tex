@@ -512,4 +512,45 @@ La relación de ser similar en el conjunto de matrices cuadradas es una relació
 \chapter{Diagonalización}
 \subsection{Eigenvalores y eigenvectores}
 
+\begin{definition}
+Se dice que un operador lineal $T$ sobre un espacio vectorial dimensionalmente finito $V$ es diagonalizable su existe una base ordenada $\beta$ para $V$ tal que $[T]_{\beta}$ sea una matriz diagonal. Por otra parte, una matriz cuadrada $A$ decimos que es diagonalizable si $A$ es similar a una matriz diagonal.
+\end{definition}
+
+\begin{theorem}
+Sea $T$ un operador lineal sobre un espacio vectorial dimensionalmente finito $V$. Los siguientes incisos son equivalentes:
+ \newline \newline
+a) $T$ es diagonalizable. \newline
+b) Existe una base ordenada $\beta$ para $V$ tal que la matriz $[T]_{\beta}$ es diagonalizable. \newline
+c) La matriz $[T]_{\gamma}$ es diagonalizable para cualquier base ordenada $\gamma$ para $V$.
+\end{theorem}
+
+\begin{proof}
+Si $T$ es diagonalizable, entonces existe una base ordenada $\beta$ para $V$ tal que $[T]_{\beta}$ es una matriz diagonal. Entonces $[T]_{\beta}$ es trivialmente diagonalizable, por lo que $a)$ implica $b)$. 
+
+Sea $\beta$ una base ordenada para $V$ tal que $[T]_{\beta}$ es diagonalizable. Entonces $[T]_{\beta}$ y $[T]_{\gamma}$ son similares. Luego, si $[T]_{\beta}$ es similar a una matriz diagonal, también $[T]_{\gamma}$ lo será por la transitividad de la relación de similitud. Y entonces $[T]_{\gamma}$ es diagonalizable, demostrando que $b)$ implica $c)$.
+
+Finalmente, si $[T]_{\gamma}$ es diagonalizable, existe una matriz diagonal $D$ similar a $[T]_{\gamma}$. Luego, existe una base ordenada $\beta '$ para $V$ tal que  $[T]_{\beta '}=D$. Por tanto, $T$ es diagonalizable y así $c)$ implica a $a)$.
+\end{proof}
+
+\begin{corollary}
+Una matriz $A$ es diagonalizable si y solo si $L_{A}$ es diagonalizable.
+\end{corollary}
+
+\begin{theorem}
+Sea $T$ un operador lineal sobre un espacio vectorial dimensionalmente finito $V$. Entonces $T$ es diagonalizable si y solo si existe una base ordenada $\beta =\{b_1,b_2,...,b_n\}$ para $V$ y escalares $\lambda_1, \lambda_2, ..., \lambda_n$ (no necesariamente distintos) tales que $T(b_j)=\lambda_j b_j$, para $1\leq j \leq n$. Bajo estas circunstancias 
+\[
+[T]_{\beta}=
+\begin{pmatrix}
+\lambda_1 & 0 & \cdots & 0\\
+0 & \lambda_2 & \cdots & 0\\
+\vdots & \vdots &   & \vdots\\
+0 & 0 & \cdots & \lambda_{n}
+\end{pmatrix}
+\]
+\end{theorem}
+
+\begin{proof}
+
+\end{proof}
+
 \end{document}

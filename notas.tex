@@ -419,6 +419,22 @@ Sean $v,s\in V$ y $c\in K$. Entonces
 \end{proof}
 
 %Agregar definición de k-algebra y su teorema
+\begin{definition}
+Un álgebra sobre el campo $K$, o una $K-$álgebra, es un espacio vectorial sobre un campo $K$ que tiene una tercera operación $\odot:V\rightarrow V$ tal que, para $u,v,w \in V$ y $\lambda \in K$, se cumple que \newline \newline
+a) $u\odot (v+w)=u\odot v+u\odot w$\\
+b) $(v+w)\odot u=v\odot u+w\odot u$\\
+c) $u\odot (\lambda v)=(\lambda u)\odot v=\lambda (u\odot v)$
+\newline \newline
+Si hay un elemento $x\in V$ tal que $x\odot v=v\odot x=v$ para todo $v\in V$, decimos que es una $K-$álgebra con identidad. Por otra parte, decimos que una $k-$álgebra es conmutativa si $u\odot v=v\odot u$.
+\end{definition}
+
+\begin{theorem}
+El conjunto $L(V)$ con las operaciones de suma de funciones, multiplicación de una función por un escalar y la composición de funciones, es una $K-$álgebra con identidad. Además, es una $K-$álgebra conmutativa si y solo si el espacio es de dimension 1.  
+\end{theorem}
+
+\begin{proof}
+La demostración es inmediata por las propiedades de las operaciones.
+\end{proof}
 
 \subsection{Representación matricial de una transformación lineal}
 
@@ -620,11 +636,11 @@ Sea $A$ una matriz de $n\times n$ sobre un campo $K$. Entonces un escalar $\lamb
 \end{proof}
 
 \begin{definition}
-Si $A\in M_{n\times n}(K)$, el polinomio $det(A-t I_{n})$ en la variable $t$ se denomina polinomio característico de $A$.
+Si $A\in M_{n\times n}(K)$, el polinomio $det(A-t I)$ en la variable $t$ se denomina polinomio característico de $A$.
 \end{definition}
 
 \begin{definition}
-Sea $T$ un operador lineal en un espacio vectorial dimensionalmente finito $V$ con base $\beta$. Definimos al polinomio característico $f(t)$ de $T$ como el polinomio característico de $A=[T]_{\beta}$; esto es, $f(t)=det(A-t I_{V})$.
+Sea $T$ un operador lineal en un espacio vectorial dimensionalmente finito $V$ con base $\beta$. Definimos al polinomio característico $f(t)$ de $T$ como el polinomio característico de $A=[T]_{\beta}$; esto es, $f(t)=det(A-t I)$.
 \end{definition}
 
 \end{document}

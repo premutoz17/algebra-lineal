@@ -550,7 +550,81 @@ Sea $T$ un operador lineal sobre un espacio vectorial dimensionalmente finito $V
 \end{theorem}
 
 \begin{proof}
+Supongase que $T$ es diagonalizable. Entonces existeuna base ordenada $\beta$ para $V$ tal que $[T]_{\beta}=D$ es una matriz diagonal. Sean $\lambda_{j}=D_{jj}$ y $\beta=\{b_1,b_2,...,b_n\}$. Entonces para cada $j$,
+\[
+T(b_{j})=\sum_{i=1}^{n}D_{ij}x_{i}=D_{jj}x_{j}=\lambda_{j}x_{j}
+\]
+Recíprocamente, supóngase que existe una base ordenada $\beta=\{b_1,b_2,...,b_n\}$ y escalares $\lambda_{1},...,\lambda_{n}$ tales que $T(b_j)=\lambda_j b_j$. Entonces evidente que 
+\[
+[T]_{\beta}=
+\begin{pmatrix}
+\lambda_1 & 0 & \cdots & 0\\
+0 & \lambda_2 & \cdots & 0\\
+\vdots & \vdots &   & \vdots\\
+0 & 0 & \cdots & \lambda_{n}
+\end{pmatrix}
+\]
+\end{proof}
+
+\begin{definition}
+Sea $T$ un operador lineal en un espacio vectorial $V$. Un elemento no nulo $v \in V$ se llama eigenvector de $T$ si existe un escalar $\lambda$ tal que $T(v)=\lambda v$. Al escalar $\lambda$ se le llama eigenvalor correspondiente al eigenvector $v$.
+
+Análogamente, si $A$ es una matriz de tamaño $n\times n$ en un campo $K$, un elemento no nulo $k\in K^{n}$ se denomina eigenvector de la matriz $A$, si $k$ es un eigenvector de $L_{A}$. El escalar $\lambda$ se denomina eigenvalor de $A$ correspondiente al eigenvector $k$.
+\end{definition}
+
+\begin{theorem}
+Sea $T$ un operador lineal en un espacio vectorial dimensionalmente finito $V$ y sean $\beta$ y $\beta '$ un par de bases cualquiera para $V$. Entonces $det([T]_{\beta})=det([T]_{\beta '})$.
+\end{theorem}
+
+\begin{proof}
+Sean $A=[T]_{\beta}$ y $B=[T]_{\beta '}$. Como $A$ y $B$ son similares, existe una matriz invertible $Q$ tal que $B=Q^{-1}AQ$. Por lo tanto
+\[
+\begin{split}
+det(B) &= det(Q^{-1}AQ) \\
+&= det(Q^{-1})det(A)det(Q) \\
+&= [det(Q)]^{-1}det(A)det(Q) \\
+&= det(A)
+\end{split}
+\]
+\end{proof}
+
+\begin{definition}
+Sea $T$ un operador lineal en un espacio vectorial dimensionalmente finito $V$. Definimos el determinante de $T$, que denotaremos por $det(T)$, de la manera siguiente: Escójase una base $\beta$ para $V$, y defínase $det(T)=det([T]_{\beta})$. Nótese que por el teorema anterior, $det(T)$ está bien definido, pues es independiente de la selección de la base $\beta$.
+\end{definition}
+
+\begin{proposition}
+Sea $T$ un operador lineal en un espacio vectorial dimensionalmente finito. Si $\lambda$ es un escalar y $\beta$ es una base ordenada cualquiera para $V$, entonces $det(T-\lambda I_{V})=det(A-\lambda I)$, donde $A=[T]_{\beta}$.
+\end{proposition}
+
+\begin{proof}
+Supongamos que $\lambda$ es un escalar, $\beta$ una base ordenada para $V$ y $A=[T]_{\beta}$. Entonces $[I_{V}]_{\beta}=I$, y por lo tanto $[T-\lambda I_{V}]_{\beta}=A-\lambda I$. Luego, por definición $det(T-\lambda I_{V})=det(A-\lambda I)$.
+\end{proof}
+
+\begin{theorem}
+Sea $T$ un operador lineal en un espacio vectorial dimensionalmente finito $V$ sobre un campo $K$. Un escalar $\lambda \in K$ es un eigenvalor de $T$ si y solo si $det(T-\lambda I_{V})=0$.
+
+\end{theorem}
+
+\begin{proof}
+Supóngase que $\lambda$ es un eigenvalor de $T$. Entonces existe un eigenvector distinto de cero $v\in V$ tal que $T(v)=\lambda v$. Luego $0=T(v)-\lambda v=(T-\lambda I_{V})(x)$. Como $v\neq 0$, $T-\lambda I_{V}$ no es invertible. Así, $det(T-\lambda I_{V})=0$. 
+
+Recíprocamente, supongamos que $det(T-\lambda I_{V})=0$, entonces $T-\lambda I_{V}$ no es invertible. Luego existe un vector no nulo $v\in V$ tal que $v\in ker(T-\lambda I_{V})$. Entonces $T(T-\lambda I_{V})(x)=0$, y lógicamente $T(v)=\lambda v$. Por lo tanto $v$ es un eigenvector de $T$.
+\end{proof}
+
+\begin{corollary}
+Sea $A$ una matriz de $n\times n$ sobre un campo $K$. Entonces un escalar $\lambda \in K$ es un eigenvlor de $A$ si y solo si $det(A-\lambda I)=0$.
+\end{corollary}
+
+\begin{proof}
 
 \end{proof}
+
+\begin{definition}
+Si $A\in M_{n\times n}(K)$, el polinomio $det(A-t I_{n})$ en la variable $t$ se denomina polinomio característico de $A$.
+\end{definition}
+
+\begin{definition}
+Sea $T$ un operador lineal en un espacio vectorial dimensionalmente finito $V$ con base $\beta$. Definimos al polinomio característico $f(t)$ de $T$ como el polinomio característico de $A=[T]_{\beta}$; esto es, $f(t)=det(A-t I_{V})$.
+\end{definition}
 
 \end{document}
